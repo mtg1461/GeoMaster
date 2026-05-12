@@ -22,7 +22,7 @@
             xmlns="http://www.w3.org/2000/svg"
           >
             <style>
-              path {
+              #allSvg path {
                 fill: #e8edf3;
                 stroke: #243145;
                 stroke-width: 0.75;
@@ -33,15 +33,15 @@
                   stroke 0.25s ease;
                 cursor: pointer;
               }
-              path:hover {
+              #allSvg path:hover {
                 fill: #f5c56b;
               }
-              .is-active {
+              #allSvg .is-active {
                 fill: #ff8f70 !important;
                 stroke: #1e293b;
                 stroke-width: 1.25;
               }
-              .is-found {
+              #allSvg .is-found {
                 fill: #72c79b !important;
               }
             </style>
@@ -2409,7 +2409,16 @@
       </section>
 
       <section id="menuPanel" class="control-panel" aria-label="Game controls">
-        <div class="brand-row">
+        <div id="brandRow" class="brand-row">
+          <span class="brand-globe" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M3.6 9h16.8"></path>
+              <path d="M3.6 15h16.8"></path>
+              <path d="M12 3a15 15 0 0 1 0 18"></path>
+              <path d="M12 3a15 15 0 0 0 0 18"></path>
+            </svg>
+          </span>
           <h1 class="brand-title">
             <span class="brand-geo">Geo</span><span class="brand-master">Master</span>
           </h1>
@@ -2419,8 +2428,20 @@
           <section class="mode-section" aria-labelledby="modeLabel">
             <span id="modeLabel" class="field-label">Select Mode</span>
             <div class="mode-options">
-              <label class="mode-card">
-                <input type="radio" name="gameMode" value="typed-country" checked />
+              <button class="mode-card" type="button" data-mode-id="select-country">
+                <span class="mode-card-body">
+                  <span class="mode-icon-wrap">
+                    <img class="mode-icon" src="assets/selection.svg" alt="" aria-hidden="true" />
+                  </span>
+                  <span class="mode-copy">
+                    <span class="mode-name">Select Correct One</span>
+                    <span class="mode-note">Choose the matching country from polished answer cards.</span>
+                  </span>
+                  <span class="mode-arrow" aria-hidden="true"></span>
+                </span>
+              </button>
+
+              <button class="mode-card" type="button" data-mode-id="typed-country">
                 <span class="mode-card-body">
                   <span class="mode-icon-wrap">
                     <img class="mode-icon" src="assets/typing.svg" alt="" aria-hidden="true" />
@@ -2431,7 +2452,7 @@
                   </span>
                   <span class="mode-arrow" aria-hidden="true"></span>
                 </span>
-              </label>
+              </button>
             </div>
           </section>
         </section>
@@ -2443,8 +2464,11 @@
             </button>
             <div>
               <p class="eyebrow">Game Mode</p>
-              <h2 id="setupModeName">Type Answer</h2>
+              <h2 id="setupModeName">Select Correct One</h2>
             </div>
+            <span class="setup-mode-icon-wrap">
+              <img id="setupModeIcon" class="setup-mode-icon" src="assets/selection.svg" alt="" aria-hidden="true" />
+            </span>
           </div>
 
           <section class="difficulty-section" aria-labelledby="difficultyLabel">
@@ -2552,10 +2576,12 @@
         </div>
 
         <div id="guessPanel" class="guess-panel">
-          <label>
+          <label id="guessField">
             <span id="guessPrompt">Guess the country</span>
             <input id="guessInput" autocomplete="off" type="text" />
           </label>
+
+          <div id="choicePanel" class="choice-panel" hidden></div>
 
           <div class="action-row">
             <button id="submitGuess" class="primary-button" type="button">
