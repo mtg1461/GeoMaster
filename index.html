@@ -2464,6 +2464,19 @@
             </div>
           </section>
 
+          <section class="mode-section" aria-labelledby="modeLabel">
+            <span id="modeLabel" class="field-label">Mode</span>
+            <div class="mode-options">
+              <label class="mode-card">
+                <input type="radio" name="gameMode" value="typed-country" checked />
+                <span class="mode-card-body">
+                  <span class="mode-name">Type Answer</span>
+                  <span class="mode-note">Name the zoomed country</span>
+                </span>
+              </label>
+            </div>
+          </section>
+
           <p id="mapStatus" class="map-status" aria-live="polite"></p>
           <button id="startGame" class="primary-button" type="button" disabled>
             Start Game
@@ -2515,13 +2528,14 @@
             >
             <span>Score <strong id="score">0</strong></span>
             <span>Difficulty <strong id="gameDifficulty">Easy</strong></span>
+            <span>Mode <strong id="gameMode">Type Answer</strong></span>
           </div>
           <div id="hint" class="letter-slots" aria-live="polite"></div>
         </div>
 
         <div id="guessPanel" class="guess-panel">
           <label>
-            <span>Guess the country</span>
+            <span id="guessPrompt">Guess the country</span>
             <input id="guessInput" autocomplete="off" type="text" />
           </label>
 
@@ -2571,6 +2585,8 @@
 
     <script src="lib/countries.js"></script>
     <script src="lib/random.js"></script>
+    <script src="lib/game-config.js"></script>
+    <script src="lib/game-modes.js"></script>
     <script src="lib/map-controller.js"></script>
     <script src="lib/confetti.min.js"></script>
     <script src="lib/game.js"></script>

@@ -95,6 +95,7 @@ button {
 
 #allSvg path.allPaths {
   stroke: #6f7988 !important;
+  transition: fill 180ms ease, stroke 180ms ease, stroke-width 180ms ease;
 }
 
 #allSvg .is-active {
@@ -242,7 +243,8 @@ input.is-correct {
   flex: 1;
 }
 
-.difficulty-section {
+.difficulty-section,
+.mode-section {
   display: grid;
   gap: 10px;
 }
@@ -277,6 +279,64 @@ input.is-correct {
   border: 0;
   opacity: 0;
   pointer-events: none;
+}
+
+.mode-options {
+  display: grid;
+  gap: 8px;
+}
+
+.mode-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  cursor: pointer;
+  color: #fff7e8;
+}
+
+.mode-card input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  min-height: 1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mode-card-body {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.mode-card:hover .mode-card-body {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.mode-card input:checked + .mode-card-body {
+  background: rgba(232, 111, 81, 0.22);
+  border-color: rgba(255, 190, 172, 0.7);
+  box-shadow: 0 0 0 2px rgba(232, 111, 81, 0.22), 0 14px 32px rgba(0, 0, 0, 0.24);
+}
+
+.mode-name {
+  font-size: 0.88rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.mode-note {
+  color: rgba(255, 247, 232, 0.66);
+  font-size: 0.74rem;
+  font-weight: 750;
 }
 
 .difficulty-card-body {
