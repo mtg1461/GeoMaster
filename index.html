@@ -2415,13 +2415,44 @@
           </h1>
         </div>
 
-        <section id="startPanel" class="panel-section">
+        <section id="startPanel" class="panel-section menu-screen">
+          <section class="mode-section" aria-labelledby="modeLabel">
+            <span id="modeLabel" class="field-label">Select Mode</span>
+            <div class="mode-options">
+              <label class="mode-card">
+                <input type="radio" name="gameMode" value="typed-country" checked />
+                <span class="mode-card-body">
+                  <span class="mode-icon-wrap">
+                    <img class="mode-icon" src="assets/typing.svg" alt="" aria-hidden="true" />
+                  </span>
+                  <span class="mode-copy">
+                    <span class="mode-name">Type Answer</span>
+                    <span class="mode-note">Name the zoomed country before the hint fills in.</span>
+                  </span>
+                  <span class="mode-arrow" aria-hidden="true"></span>
+                </span>
+              </label>
+            </div>
+          </section>
+        </section>
+
+        <section id="modeSetupPanel" class="panel-section menu-screen" hidden>
+          <div class="setup-header">
+            <button id="backToModes" class="back-button" type="button" aria-label="Back to modes">
+              <span aria-hidden="true"></span>
+            </button>
+            <div>
+              <p class="eyebrow">Game Mode</p>
+              <h2 id="setupModeName">Type Answer</h2>
+            </div>
+          </div>
+
           <section class="difficulty-section" aria-labelledby="difficultyLabel">
             <span id="difficultyLabel" class="field-label">Difficulty</span>
             <div class="difficulty-showcase">
               <div class="difficulty-options" id="difficultyOptions">
                 <label class="difficulty-card" style="--tier-color: #79d891">
-                  <input type="radio" name="difficulty" value="easy" checked />
+                  <input type="radio" name="difficulty" value="easy" />
                   <span class="difficulty-card-body">
                     <span class="difficulty-name">Easy</span>
                   </span>
@@ -2461,19 +2492,6 @@
                 class="difficulty-distribution"
                 aria-live="polite"
               ></div>
-            </div>
-          </section>
-
-          <section class="mode-section" aria-labelledby="modeLabel">
-            <span id="modeLabel" class="field-label">Mode</span>
-            <div class="mode-options">
-              <label class="mode-card">
-                <input type="radio" name="gameMode" value="typed-country" checked />
-                <span class="mode-card-body">
-                  <span class="mode-name">Type Answer</span>
-                  <span class="mode-note">Name the zoomed country</span>
-                </span>
-              </label>
             </div>
           </section>
 
