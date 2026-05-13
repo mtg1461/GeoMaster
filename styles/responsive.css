@@ -1,0 +1,57 @@
+@media (max-width: 860px) {
+  body {
+    overflow: hidden;
+  }
+
+  .app-shell {
+    min-height: 100vh;
+  }
+
+  .control-panel {
+    top: auto;
+    bottom: 16px;
+    transform: translateX(-50%);
+    max-height: 76vh;
+    padding: 22px;
+  }
+
+  .difficulty-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .difficulty-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .distribution-body {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .answer-panel {
+    top: 12px;
+    padding: 14px;
+  }
+
+  .guess-panel {
+    bottom: 12px;
+    padding: 16px;
+  }
+
+  .choice-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .letter-slot {
+    width: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-hud.feedback-wrong,
+  .feedback-burst,
+  .confetti-piece,
+  .wrong-ring {
+    animation-duration: 1ms;
+  }
+}

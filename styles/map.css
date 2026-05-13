@@ -1,0 +1,109 @@
+.map-stage {
+  position: fixed;
+  inset: 0;
+  min-width: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    var(--map-water);
+  background-size: 48px 48px;
+}
+
+.world-map,
+.world-map svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.world-map svg {
+  transition: opacity 220ms ease;
+}
+
+.target-marker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 82px;
+  aspect-ratio: 1;
+  border: 3px dashed rgba(210, 59, 67, 0.96);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  box-shadow: none;
+  animation: target-spin 5s linear infinite;
+}
+
+.target-marker::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  aspect-ratio: 1;
+  background: #d23b43;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.target-marker.is-ultra-tiny::after {
+  display: none;
+}
+
+#allSvg path.allPaths {
+  stroke: #6f7988 !important;
+  transition: fill 180ms ease, stroke 180ms ease, stroke-width 180ms ease;
+}
+
+#allSvg .is-active {
+  fill: #ff8f70 !important;
+  stroke: #e6816c !important;
+  stroke-width: 0.8 !important;
+}
+
+#allSvg .is-active.is-tiny-active {
+  fill: #ff8f70 !important;
+  stroke: transparent !important;
+  stroke-width: 0 !important;
+}
+
+#allSvg .is-active.is-micro-active {
+  fill: #ff8f70 !important;
+  stroke: transparent !important;
+  stroke-width: 0 !important;
+}
+
+#allSvg .is-map-answer {
+  fill: #d6972c !important;
+  stroke: #ffd687 !important;
+  stroke-width: 0.9 !important;
+}
+
+#allSvg .is-map-wrong {
+  fill: #b42a32 !important;
+  stroke: #ffbebe !important;
+  stroke-width: 0.9 !important;
+}
+
+#allSvg.is-map-picking path.allPaths {
+  cursor: crosshair;
+}
+
+#allSvg:not(.is-map-picking) path.allPaths:not(.is-active):not(.is-found):not(.is-map-answer):not(.is-map-wrong):hover {
+  fill: #e8edf3 !important;
+}
+
+#allSvg.is-map-picking path.allPaths:not(.is-map-answer):not(.is-map-wrong):hover {
+  fill: #f5c56b !important;
+}
+
+@keyframes target-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
