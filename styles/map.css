@@ -56,6 +56,10 @@
   transition: fill 180ms ease, stroke 180ms ease, stroke-width 180ms ease;
 }
 
+#allSvg.is-camera-moving path.allPaths {
+  transition: none;
+}
+
 #allSvg .is-active {
   fill: #ff8f70 !important;
   stroke: #e6816c !important;
