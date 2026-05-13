@@ -101,8 +101,27 @@
     font-size: 1.28rem;
   }
 
+  .settings-header h2 {
+    font-size: 1.28rem;
+  }
+
   .setup-header .eyebrow {
     font-size: 0.66rem;
+  }
+
+  .settings-header .eyebrow {
+    font-size: 0.66rem;
+  }
+
+  .settings-section {
+    gap: 7px;
+  }
+
+  .reset-data-button {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 0.78rem;
+    font-weight: 750;
   }
 
   .field-label {
@@ -278,6 +297,32 @@
     min-height: 22px;
     padding: 0 7px;
     font-size: 0.6rem;
+  }
+
+  .confirm-dialog {
+    gap: 11px;
+    width: min(300px, calc(100vw - 32px));
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .confirm-dialog .eyebrow {
+    font-size: 1rem;
+  }
+
+  .confirm-dialog h2 {
+    font-size: 1.12rem;
+  }
+
+  .dialog-actions {
+    gap: 7px;
+  }
+
+  .dialog-actions .secondary-button,
+  .dialog-actions .danger-button {
+    min-height: 34px;
+    font-size: 0.74rem;
+    font-weight: 700;
   }
 
   .answer-panel {
