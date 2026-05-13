@@ -55,6 +55,12 @@
   transform-origin: center;
 }
 
+.brand-copy {
+  display: grid;
+  justify-items: stretch;
+  gap: 4px;
+}
+
 @keyframes brand-globe-bounce {
   0% {
     transform: translateY(0) rotate(0deg) scale(1);
@@ -84,10 +90,22 @@ h1 {
 }
 
 .brand-title {
+  margin: 0;
   font-size: clamp(2.4rem, 6.6vw, 4rem);
   font-weight: 950;
   line-height: 1;
   transform: translateY(-5px);
+}
+
+.brand-credit {
+  width: 100%;
+  margin: -4px 0 0;
+  color: rgba(255, 247, 232, 0.62);
+  font-size: 0.72rem;
+  font-weight: 850;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .brand-geo {
@@ -234,6 +252,16 @@ label {
   display: block;
   width: 34px;
   height: 34px;
+}
+
+.scoreboard-header-icon-wrap {
+  background: transparent;
+  border-color: transparent;
+}
+
+.scoreboard-header-icon-wrap .setup-mode-icon {
+  filter: brightness(0) invert(1);
+  opacity: 0.94;
 }
 
 .back-button {
@@ -587,6 +615,7 @@ input.is-correct {
 .scoreboard-list {
   display: grid;
   gap: 9px;
+  margin-top: 8px;
 }
 
 .scoreboard-row,
@@ -635,18 +664,40 @@ input.is-correct {
 }
 
 .difficulty-tag {
+  --tag-color: #fffaf1;
   display: inline-grid;
   place-items: center;
   min-height: 28px;
   padding: 0 10px;
-  color: #1e2733;
-  background: rgba(255, 250, 241, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.48);
+  color: #fff7e8;
+  background: color-mix(in srgb, var(--tag-color) 24%, rgba(20, 24, 32, 0.66));
+  border: 1px solid color-mix(in srgb, var(--tag-color) 66%, rgba(255, 255, 255, 0.28));
   border-radius: 999px;
+  box-shadow: 0 0 18px color-mix(in srgb, var(--tag-color) 22%, transparent);
   font-size: 0.72rem;
   font-weight: 950;
   line-height: 1;
   text-transform: capitalize;
+}
+
+.difficulty-tag--easy {
+  --tag-color: #79d891;
+}
+
+.difficulty-tag--normal {
+  --tag-color: #6db7ff;
+}
+
+.difficulty-tag--hard {
+  --tag-color: #f2c94c;
+}
+
+.difficulty-tag--expert {
+  --tag-color: #f2994a;
+}
+
+.difficulty-tag--impossible {
+  --tag-color: #eb5757;
 }
 
 .scoreboard-empty {
