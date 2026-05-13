@@ -2409,6 +2409,9 @@
       </section>
 
       <section id="menuPanel" class="control-panel" aria-label="Game controls">
+        <button id="openSettings" class="panel-settings-button" type="button" aria-label="Settings">
+          <img src="assets/settings.svg" alt="" aria-hidden="true" />
+        </button>
         <div id="brandRow" class="brand-row">
           <span class="brand-globe" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
@@ -2428,6 +2431,26 @@
           <section class="mode-section" aria-labelledby="modeLabel">
             <span id="modeLabel" class="field-label">Select Mode</span>
             <div id="modeOptions" class="mode-options"></div>
+          </section>
+        </section>
+
+        <section id="settingsPanel" class="panel-section menu-screen" hidden>
+          <div class="settings-header">
+            <button id="backFromSettings" class="back-button" type="button" aria-label="Back to modes">
+              <span aria-hidden="true"></span>
+            </button>
+            <div>
+              <p class="eyebrow">Settings</p>
+              <h2>Game Settings</h2>
+            </div>
+            <span class="setup-mode-icon-wrap">
+              <img class="setup-mode-icon" src="assets/settings.svg" alt="" aria-hidden="true" />
+            </span>
+          </div>
+
+          <section class="settings-section" aria-labelledby="resetDataLabel">
+            <span id="resetDataLabel" class="field-label">Scoreboard Data</span>
+            <button id="resetData" class="reset-data-button" type="button">Reset data</button>
           </section>
         </section>
 
@@ -2597,6 +2620,17 @@
           <div class="dialog-actions">
             <button id="cancelQuit" class="secondary-button" type="button">Cancel</button>
             <button id="confirmQuit" class="danger-button" type="button">Quit</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="resetDialog" class="modal-backdrop" hidden>
+        <div class="confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="resetDialogTitle">
+          <p class="eyebrow">Reset Data</p>
+          <h2 id="resetDialogTitle">Are you sure?</h2>
+          <div class="dialog-actions">
+            <button id="cancelReset" class="secondary-button" type="button">Cancel</button>
+            <button id="confirmReset" class="danger-button" type="button">Delete</button>
           </div>
         </div>
       </section>

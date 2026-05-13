@@ -180,6 +180,7 @@ button {
 }
 
 .brand-row {
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
@@ -248,8 +249,41 @@ h1 {
 }
 
 .panel-section {
+  position: relative;
   display: grid;
   gap: 18px;
+}
+
+.panel-settings-button {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.panel-settings-button:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.panel-settings-button img,
+.settings-icon-display {
+  filter: brightness(0) invert(1);
+}
+
+.panel-settings-button img {
+  width: 21px;
+  height: 21px;
 }
 
 .menu-screen {
@@ -286,6 +320,30 @@ label {
   grid-template-columns: 42px minmax(0, 1fr) 62px;
   align-items: center;
   gap: 12px;
+}
+
+.settings-header {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 62px;
+  align-items: center;
+  gap: 12px;
+}
+
+.settings-header .eyebrow {
+  margin-bottom: 3px;
+}
+
+.settings-header h2 {
+  margin: 0;
+  color: #fff7e8;
+  font-size: clamp(1.85rem, 4.4vw, 2.55rem);
+  font-weight: 950;
+  line-height: 1;
+}
+
+.settings-section {
+  display: grid;
+  gap: 10px;
 }
 
 .setup-header .eyebrow {
@@ -1128,6 +1186,23 @@ input.is-correct {
 .game-over-panel h2 {
   margin: 0;
   font-size: 1.8rem;
+}
+
+.reset-data-button {
+  min-height: 50px;
+  color: #fff7e8;
+  background: rgba(96, 13, 20, 0.7);
+  border: 1px solid rgba(255, 190, 190, 0.26);
+  border-radius: 8px;
+  padding: 0 16px;
+  font-weight: 950;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.reset-data-button:hover {
+  transform: translateY(-2px);
+  background: rgba(140, 18, 28, 0.82);
+  box-shadow: 0 12px 26px rgba(96, 13, 20, 0.28);
 }
 
 .final-score {
