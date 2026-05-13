@@ -186,6 +186,7 @@ button {
   gap: 12px;
   text-align: center;
   min-height: 78px;
+  padding-right: 42px;
 }
 
 .brand-globe {
