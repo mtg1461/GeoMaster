@@ -12,7 +12,64 @@
     bottom: auto;
     transform: translate(-50%, -50%);
     max-height: calc(100vh - 32px);
-    padding: 22px;
+    gap: 14px;
+    padding: 15px;
+  }
+
+  .brand-row {
+    min-height: 58px;
+    gap: 8px;
+  }
+
+  .brand-globe {
+    width: 46px;
+    height: 46px;
+  }
+
+  .brand-title {
+    font-size: 2rem;
+    transform: translateY(-3px);
+  }
+
+  .brand-credit {
+    font-size: 0.58rem;
+    margin-top: -3px;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .danger-button {
+    min-height: 38px;
+    padding: 0 12px;
+    font-size: 0.82rem;
+  }
+
+  .back-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .icon-button,
+  .danger-icon-button,
+  .action-row .danger-icon-button {
+    width: 38px;
+    min-height: 38px;
+    flex-basis: 38px;
+  }
+
+  .danger-icon-button span,
+  .danger-icon-button span::before,
+  .danger-icon-button span::after {
+    width: 15px;
+  }
+
+  .difficulty-card-body {
+    min-height: 34px;
+    padding: 6px 7px;
+  }
+
+  .difficulty-name {
+    font-size: 0.68rem;
   }
 
   .difficulty-showcase {
@@ -24,13 +81,203 @@
   }
 
   .distribution-body {
-    grid-template-columns: 1fr;
+    grid-template-columns: 78px minmax(0, 1fr);
     justify-items: center;
+    gap: 8px;
   }
 
   #setupModeName {
-    font-size: 1.45rem;
+    font-size: 1.28rem;
     line-height: 1.08;
+  }
+
+  .setup-header,
+  .settings-header {
+    grid-template-columns: 34px minmax(0, 1fr) 44px;
+    gap: 8px;
+  }
+
+  .setup-header h2 {
+    font-size: 1.28rem;
+  }
+
+  .setup-header .eyebrow {
+    font-size: 0.66rem;
+  }
+
+  .field-label {
+    font-size: 0.72rem;
+  }
+
+  .mode-options {
+    gap: 7px;
+  }
+
+  .mode-card-body {
+    grid-template-columns: 42px minmax(0, 1fr) 14px;
+    gap: 10px;
+    min-height: 62px;
+    padding: 9px 11px;
+  }
+
+  .mode-icon-wrap {
+    width: 42px;
+  }
+
+  .mode-icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  .mode-copy {
+    gap: 3px;
+  }
+
+  .mode-name {
+    font-size: 0.88rem;
+  }
+
+  .mode-note {
+    font-size: 0.66rem;
+    line-height: 1.22;
+  }
+
+  .mode-arrow {
+    width: 8px;
+    height: 8px;
+  }
+
+  .setup-mode-icon-wrap {
+    width: 44px;
+  }
+
+  .setup-mode-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .settings-toggle {
+    min-height: 32px;
+    padding: 0 9px;
+    gap: 7px;
+    font-size: 0.74rem;
+    font-weight: 650;
+  }
+
+  .settings-chevron {
+    width: 7px;
+    height: 7px;
+  }
+
+  .more-settings {
+    gap: 8px;
+    padding: 10px 11px 11px;
+  }
+
+  input,
+  select {
+    min-height: 34px;
+    padding: 0 9px;
+    font-size: 0.82rem;
+  }
+
+  .difficulty-distribution {
+    gap: 8px;
+    min-height: 0;
+    padding: 9px;
+  }
+
+  .distribution-header {
+    gap: 8px;
+    font-size: 0.62rem;
+  }
+
+  .pie-chart {
+    width: 72px;
+  }
+
+  .pie-chart::after {
+    inset: 17px;
+  }
+
+  .pie-chart span {
+    font-size: 1.06rem;
+  }
+
+  .distribution-legend {
+    gap: 3px;
+  }
+
+  .legend-item {
+    grid-template-columns: 8px minmax(0, 1fr) auto;
+    gap: 5px;
+    padding: 3px 5px;
+    font-size: 0.58rem;
+  }
+
+  .legend-dot {
+    width: 7px;
+  }
+
+  .legend-item strong {
+    font-size: 0.68rem;
+  }
+
+  .latest-score-summary {
+    gap: 6px 9px;
+    padding: 11px;
+  }
+
+  .latest-score-label {
+    font-size: 0.62rem;
+  }
+
+  .latest-score-value {
+    font-size: 1.9rem;
+  }
+
+  .latest-score-max {
+    font-size: 0.95rem;
+  }
+
+  .scoreboard-list {
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .scoreboard-row,
+  .scoreboard-empty {
+    min-height: 48px;
+    padding: 8px 10px;
+  }
+
+  .scoreboard-row {
+    grid-template-columns: 28px minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+
+  .scoreboard-rank {
+    width: 28px;
+    font-size: 0.78rem;
+    border-radius: 7px;
+  }
+
+  .scoreboard-meta {
+    gap: 3px;
+  }
+
+  .scoreboard-meta strong {
+    font-size: 0.88rem;
+  }
+
+  .scoreboard-meta small {
+    font-size: 0.62rem;
+  }
+
+  .difficulty-tag {
+    min-height: 22px;
+    padding: 0 7px;
+    font-size: 0.6rem;
   }
 
   .answer-panel {
@@ -53,11 +300,71 @@
 
   .guess-panel {
     bottom: 12px;
-    padding: 16px;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .guess-panel .primary-button,
+  .guess-panel .secondary-button,
+  .guess-panel .danger-icon-button {
+    min-height: 32px;
+    font-size: 0.72rem;
+    font-weight: 650;
+  }
+
+  .guess-panel .danger-icon-button {
+    width: 34px;
+    flex-basis: 34px;
   }
 
   .choice-panel {
     grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .choice-button {
+    grid-template-columns: 24px minmax(0, 1fr);
+    min-height: 36px;
+    gap: 7px;
+    padding: 5px 8px;
+    font-weight: 650;
+  }
+
+  .choice-index {
+    width: 24px;
+    font-size: 0.64rem;
+  }
+
+  .choice-label {
+    font-size: 0.78rem;
+  }
+
+  .round-countdown {
+    top: 50px;
+  }
+
+  .round-countdown__ring {
+    width: 82px;
+  }
+
+  .round-countdown__ring::before {
+    width: 64px;
+  }
+
+  .round-countdown__content {
+    gap: 4px;
+  }
+
+  .round-countdown__number {
+    font-size: 1.68rem;
+  }
+
+  .round-countdown__label {
+    font-size: 0.42rem;
+  }
+
+  .round-countdown.is-timeout .round-countdown__number {
+    font-size: 0.64rem;
   }
 
   .letter-slot {
