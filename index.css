@@ -116,6 +116,30 @@ button {
   stroke-width: 0 !important;
 }
 
+#allSvg .is-map-answer {
+  fill: #d6972c !important;
+  stroke: #ffd687 !important;
+  stroke-width: 0.9 !important;
+}
+
+#allSvg .is-map-wrong {
+  fill: #b42a32 !important;
+  stroke: #ffbebe !important;
+  stroke-width: 0.9 !important;
+}
+
+#allSvg.is-map-picking path.allPaths {
+  cursor: crosshair;
+}
+
+#allSvg:not(.is-map-picking) path.allPaths:not(.is-active):not(.is-found):not(.is-map-answer):not(.is-map-wrong):hover {
+  fill: #e8edf3 !important;
+}
+
+#allSvg.is-map-picking path.allPaths:not(.is-map-answer):not(.is-map-wrong):hover {
+  fill: #f5c56b !important;
+}
+
 @keyframes target-spin {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -1033,6 +1057,21 @@ input.is-correct {
 
 .guess-panel.is-choice-mode {
   width: min(720px, calc(100vw - 32px));
+}
+
+.guess-panel.is-map-click-mode {
+  width: min(440px, calc(100vw - 32px));
+}
+
+.letter-slots.is-map-click-prompt {
+  min-height: 58px;
+  align-items: center;
+  color: #fff7e8;
+  font-size: clamp(1.65rem, 4.8vw, 2.5rem);
+  font-weight: 950;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
 }
 
 .choice-panel {
