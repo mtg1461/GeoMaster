@@ -2427,33 +2427,7 @@
         <section id="startPanel" class="panel-section menu-screen">
           <section class="mode-section" aria-labelledby="modeLabel">
             <span id="modeLabel" class="field-label">Select Mode</span>
-            <div class="mode-options">
-              <button class="mode-card" type="button" data-mode-id="select-country">
-                <span class="mode-card-body">
-                  <span class="mode-icon-wrap">
-                    <img class="mode-icon" src="assets/selection.svg" alt="" aria-hidden="true" />
-                  </span>
-                  <span class="mode-copy">
-                    <span class="mode-name">Select Correct One</span>
-                    <span class="mode-note">Choose the matching country from polished answer cards.</span>
-                  </span>
-                  <span class="mode-arrow" aria-hidden="true"></span>
-                </span>
-              </button>
-
-              <button class="mode-card" type="button" data-mode-id="typed-country">
-                <span class="mode-card-body">
-                  <span class="mode-icon-wrap">
-                    <img class="mode-icon" src="assets/typing.svg" alt="" aria-hidden="true" />
-                  </span>
-                  <span class="mode-copy">
-                    <span class="mode-name">Type Answer</span>
-                    <span class="mode-note">Name the zoomed country before the hint fills in.</span>
-                  </span>
-                  <span class="mode-arrow" aria-hidden="true"></span>
-                </span>
-              </button>
-            </div>
+            <div id="modeOptions" class="mode-options"></div>
           </section>
         </section>
 
@@ -2571,6 +2545,7 @@
             <span>Score <strong id="score">0</strong></span>
             <span>Difficulty <strong id="gameDifficulty">Easy</strong></span>
             <span>Mode <strong id="gameMode">Type Answer</strong></span>
+            <span id="roundTimerStat" class="timer-stat" hidden>Time <strong id="roundTimer">10</strong></span>
           </div>
           <div id="hint" class="letter-slots" aria-live="polite"></div>
         </div>
@@ -2631,8 +2606,13 @@
     <script src="lib/random.js"></script>
     <script src="lib/game-config.js"></script>
     <script src="lib/game-modes.js"></script>
+    <script src="lib/app-state.js"></script>
+    <script src="lib/mode-ui-adapters.js"></script>
+    <script src="lib/views/hub-view.js"></script>
+    <script src="lib/views/setup-view.js"></script>
     <script src="lib/map-controller.js"></script>
     <script src="lib/confetti.min.js"></script>
+    <script src="lib/feedback-effects.js"></script>
     <script src="lib/game.js"></script>
     <script src="lib/main.js"></script>
   </body>

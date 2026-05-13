@@ -1104,6 +1104,14 @@ input.is-correct {
   box-shadow: 0 16px 34px rgba(140, 18, 28, 0.24);
 }
 
+.choice-button.is-answer:not(.is-correct) {
+  color: #fff7e8;
+  background: rgba(214, 151, 44, 0.72);
+  border-color: rgba(255, 214, 135, 0.8);
+  box-shadow: 0 16px 34px rgba(214, 151, 44, 0.28);
+  opacity: 1;
+}
+
 .choice-index {
   display: grid;
   place-items: center;
@@ -1158,6 +1166,13 @@ input.is-correct {
 .confirm-dialog h2 {
   margin: 0;
   font-size: 1.6rem;
+}
+
+.game-over-panel .eyebrow,
+.confirm-dialog .eyebrow {
+  font-size: clamp(1.1rem, 3.8vw, 1.55rem);
+  font-weight: 950;
+  line-height: 1;
 }
 
 .dialog-actions {
@@ -1266,6 +1281,7 @@ input.is-correct {
 
 .stats-strip {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 28px;
   color: rgba(255, 247, 232, 0.72);
@@ -1276,6 +1292,52 @@ input.is-correct {
 .stats-strip strong {
   color: #fff7e8;
   margin-left: 4px;
+}
+
+.timer-stat {
+  display: inline-flex;
+  align-items: center;
+  flex: 1 0 100%;
+  gap: 10px;
+  width: fit-content;
+  min-width: 132px;
+  justify-content: center;
+  margin: 2px auto 0;
+  padding: 9px 16px;
+  color: rgba(255, 247, 232, 0.76);
+  background: rgba(255, 250, 241, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.04), 0 12px 28px rgba(0, 0, 0, 0.18);
+  font-size: 0.82rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.timer-stat strong {
+  min-width: 2ch;
+  margin-left: 0;
+  color: var(--accent);
+  font-size: 1.76rem;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 0 18px rgba(232, 111, 81, 0.28);
+  text-transform: none;
+}
+
+.timer-stat.is-urgent {
+  color: #ffd1c6;
+  border-color: rgba(232, 111, 81, 0.42);
+  animation: timer-pulse 620ms ease-in-out infinite alternate;
+}
+
+@keyframes timer-pulse {
+  from {
+    box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.04), 0 0 0 rgba(232, 111, 81, 0);
+  }
+  to {
+    box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.04), 0 0 24px rgba(232, 111, 81, 0.3);
+  }
 }
 
 .letter-slots {
