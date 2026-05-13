@@ -2440,9 +2440,9 @@
               <p class="eyebrow">Game Mode</p>
               <h2 id="setupModeName">Select Correct One</h2>
             </div>
-            <span class="setup-mode-icon-wrap">
-              <img id="setupModeIcon" class="setup-mode-icon" src="assets/selection.svg" alt="" aria-hidden="true" />
-            </span>
+            <button id="showScoreboard" class="setup-mode-icon-wrap setup-scoreboard-button" type="button" aria-label="Show scoreboard">
+              <img id="setupModeIcon" class="setup-mode-icon" src="assets/leaderboard.svg" alt="" aria-hidden="true" />
+            </button>
           </div>
 
           <section class="difficulty-section" aria-labelledby="difficultyLabel">
@@ -2529,6 +2529,24 @@
             </div>
           </section>
         </section>
+
+        <section id="scoreboardPanel" class="panel-section menu-screen" hidden>
+          <div class="setup-header">
+            <button id="backToSetup" class="back-button" type="button" aria-label="Back to mode setup">
+              <span aria-hidden="true"></span>
+            </button>
+            <div>
+              <p class="eyebrow">Scoreboard</p>
+              <h2 id="scoreboardModeName">Select Correct One</h2>
+            </div>
+            <span class="setup-mode-icon-wrap">
+              <img class="setup-mode-icon" src="assets/leaderboard.svg" alt="" aria-hidden="true" />
+            </span>
+          </div>
+
+          <div id="latestScoreSummary" class="latest-score-summary" hidden></div>
+          <div id="scoreboardList" class="scoreboard-list" aria-live="polite"></div>
+        </section>
       </section>
 
       <section id="gamePanel" class="game-hud" hidden>
@@ -2607,9 +2625,11 @@
     <script src="lib/game-config.js"></script>
     <script src="lib/game-modes.js"></script>
     <script src="lib/app-state.js"></script>
+    <script src="lib/scoreboard-store.js"></script>
     <script src="lib/mode-ui-adapters.js"></script>
     <script src="lib/views/hub-view.js"></script>
     <script src="lib/views/setup-view.js"></script>
+    <script src="lib/views/scoreboard-view.js"></script>
     <script src="lib/map-controller.js"></script>
     <script src="lib/confetti.min.js"></script>
     <script src="lib/feedback-effects.js"></script>
