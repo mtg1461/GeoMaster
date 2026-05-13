@@ -21,6 +21,12 @@
   transition: opacity 220ms ease;
 }
 
+@media (max-width: 860px) {
+  .map-stage.is-game-active .world-map svg {
+    transform: translateY(-12vh);
+  }
+}
+
 .target-marker {
   position: absolute;
   left: 50%;
