@@ -198,6 +198,20 @@
   width: min(440px, calc(100vw - 32px));
 }
 
+.map-click-prompt {
+  min-height: 46px;
+  display: grid;
+  place-items: center;
+  padding: 4px 8px;
+  color: #fff7e8;
+  font-size: clamp(1.25rem, 3.8vw, 1.82rem);
+  font-weight: 950;
+  line-height: 1.05;
+  text-align: center;
+  overflow-wrap: anywhere;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
 .letter-slots.is-map-click-prompt {
   min-height: 58px;
   align-items: center;

@@ -317,6 +317,13 @@
     flex-basis: 34px;
   }
 
+  .map-click-prompt {
+    min-height: 34px;
+    padding: 2px 6px;
+    font-size: 1rem;
+    line-height: 1.08;
+  }
+
   .choice-panel {
     grid-template-columns: 1fr;
     gap: 6px;
