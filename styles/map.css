@@ -58,7 +58,11 @@
 }
 
 #allSvg path.allPaths {
+  fill: #e8edf3;
   stroke: #6f7988 !important;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: default;
   transition: fill 180ms ease, stroke 180ms ease, stroke-width 180ms ease;
 }
 
@@ -94,6 +98,10 @@
   fill: #b42a32 !important;
   stroke: #ffbebe !important;
   stroke-width: 0.9 !important;
+}
+
+#allSvg .is-found {
+  fill: #72c79b !important;
 }
 
 #allSvg.is-map-picking path.allPaths {

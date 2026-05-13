@@ -493,6 +493,12 @@
   backdrop-filter: blur(16px) saturate(130%);
 }
 
+.game-hud.is-camera-moving .stats-strip > span {
+  background: rgba(20, 24, 32, 0.34);
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
 .stats-strip > span:nth-child(2) {
   margin-right: auto;
 }
