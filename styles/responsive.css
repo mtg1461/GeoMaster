@@ -29,8 +29,12 @@
   }
 
   .answer-panel {
-    top: 12px;
+    top: 74px;
     padding: 14px;
+  }
+
+  .answer-panel.is-floating-prompt {
+    top: 188px;
   }
 
   .guess-panel {
@@ -51,7 +55,9 @@
   .game-hud.feedback-wrong,
   .feedback-burst,
   .confetti-piece,
-  .wrong-ring {
+  .wrong-ring,
+  .round-countdown__number,
+  .round-countdown.is-timeout .round-countdown__ring {
     animation-duration: 1ms;
   }
 }

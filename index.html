@@ -2575,19 +2575,28 @@
       <section id="gamePanel" class="game-hud" hidden>
         <div id="feedbackFx" class="feedback-fx" aria-hidden="true"></div>
 
-        <div class="answer-panel">
-          <div class="stats-strip">
-            <span
-              >Round
-              <strong
-                ><span id="round">0</span>/<span id="total">0</span></strong
-              ></span
-            >
-            <span>Score <strong id="score">0</strong></span>
-            <span>Difficulty <strong id="gameDifficulty">Easy</strong></span>
-            <span>Mode <strong id="gameMode">Type Answer</strong></span>
-            <span id="roundTimerStat" class="timer-stat" hidden>Time <strong id="roundTimer">10</strong></span>
+        <div class="stats-strip">
+          <span
+            >Round
+            <strong
+              ><span id="round">0</span>/<span id="total">0</span></strong
+            ></span
+          >
+          <span>Score <strong id="score">0</strong></span>
+          <span>Difficulty <strong id="gameDifficulty">Easy</strong></span>
+          <span>Mode <strong id="gameMode">Type Answer</strong></span>
+        </div>
+
+        <div id="roundTimerStat" class="round-countdown" hidden>
+          <div class="round-countdown__ring">
+            <div class="round-countdown__content">
+              <div id="roundTimer" class="round-countdown__number">10</div>
+              <div class="round-countdown__label">seconds</div>
+            </div>
           </div>
+        </div>
+
+        <div id="answerPanel" class="answer-panel">
           <div id="hint" class="letter-slots" aria-live="polite"></div>
         </div>
 

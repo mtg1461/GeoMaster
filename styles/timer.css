@@ -1,0 +1,123 @@
+.round-countdown {
+  --timer-progress: 360deg;
+  position: absolute;
+  left: 50%;
+  top: 54px;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.round-countdown__ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 132px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent) var(--timer-progress), rgba(255, 255, 255, 0.08) 0deg);
+  box-shadow: 0 0 22px rgba(232, 111, 81, 0.35);
+  transition: background 200ms linear, box-shadow 200ms linear;
+}
+
+.round-countdown__ring::before {
+  content: "";
+  position: absolute;
+  width: 102px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(20, 24, 32, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.round-countdown__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.round-countdown__number {
+  color: #fff7e8;
+  font-size: 2.65rem;
+  font-weight: 950;
+  line-height: 0.8;
+  text-shadow: 0 0 10px rgba(232, 111, 81, 0.9), 0 0 25px rgba(232, 111, 81, 0.55);
+}
+
+.round-countdown__number.is-pop {
+  animation: round-countdown-pop 280ms ease-out;
+}
+
+.round-countdown__label {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.56rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.round-countdown.is-urgent .round-countdown__ring {
+  background: conic-gradient(#f2c94c var(--timer-progress), rgba(255, 255, 255, 0.08) 0deg);
+  box-shadow: 0 0 28px rgba(242, 201, 76, 0.55);
+}
+
+.round-countdown.is-urgent .round-countdown__number {
+  text-shadow: 0 0 10px rgba(242, 201, 76, 0.95), 0 0 25px rgba(242, 201, 76, 0.7);
+}
+
+.round-countdown.is-timeout .round-countdown__ring {
+  background: conic-gradient(#d23b43 360deg, rgba(255, 255, 255, 0.08) 0deg);
+  box-shadow: 0 0 35px rgba(210, 59, 67, 0.75);
+  animation: round-countdown-shake 350ms ease-in-out;
+}
+
+.round-countdown.is-timeout .round-countdown__number {
+  color: #ff8f70;
+  font-size: 1rem;
+  line-height: 1;
+  text-shadow: 0 0 12px rgba(210, 59, 67, 1), 0 0 28px rgba(210, 59, 67, 0.8);
+  animation: round-countdown-timeout-pop 450ms ease-out;
+}
+
+.round-countdown.is-timeout .round-countdown__label {
+  display: none;
+}
+
+@keyframes round-countdown-pop {
+  0%, 100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes round-countdown-timeout-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes round-countdown-shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+}
