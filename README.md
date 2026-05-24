@@ -1,6 +1,8 @@
 # GeoMaster
 
 **Live demo:** [https://mtg1461.github.io/geo-master/](https://mtg1461.github.io/geo-master/)
+
+
 GeoMaster is a lightweight browser-based geography game hub built around an interactive SVG world map. Players can test their country knowledge through multiple game modes, timed rounds, responsive map zooming, score tracking, and polished audio-visual feedback.
 
 ![GeoMaster gameplay preview](assets/preview.png)
