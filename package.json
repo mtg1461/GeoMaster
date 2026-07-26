@@ -1,0 +1,8 @@
+{
+  "name": "geo-master",
+  "private": true,
+  "scripts": {
+    "check": "node --check lib/*.js && node --check lib/views/*.js",
+    "test": "node --test"
+  }
+}

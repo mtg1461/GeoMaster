@@ -36,3 +36,12 @@ GeoMaster is a lightweight browser-based geography game hub built around an inte
 - Responsive interface design.
 - Categorized sound feedback.
 - Cleanup for timers, handlers, transitions, and effects.
+
+## Development
+
+The application has no runtime dependencies and can be served by any static file server. A current Node.js release is only needed for the repository checks:
+
+```sh
+npm test
+npm run check
+```
