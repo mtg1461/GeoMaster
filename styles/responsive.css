@@ -424,7 +424,7 @@
   }
 
   .flag-frame {
-    height: clamp(44px, 9vh, 76px);
+    height: clamp(58px, 11vh, 84px);
     padding: 5px 7px;
   }
 
