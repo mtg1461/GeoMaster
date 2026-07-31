@@ -324,21 +324,21 @@
    image options a dedicated, map-friendly presentation. */
 .guess-panel.is-choice-mode.is-flag-choice-mode {
   width: min(620px, calc(100vw - 32px));
-  gap: 10px;
-  padding: 14px;
+  gap: 7px;
+  padding: 10px;
 }
 
 .choice-panel.is-flag-choice {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 7px;
 }
 
 .choice-instruction {
   grid-column: 1 / -1;
-  min-height: 24px;
+  min-height: 18px;
   margin: 0;
   color: #fff7e8;
-  font-size: 0.84rem;
+  font-size: 0.78rem;
   font-weight: 850;
   line-height: 1.2;
   text-align: center;
@@ -350,17 +350,17 @@
   grid-template-rows: minmax(0, 1fr);
   place-items: center;
   gap: 0;
-  min-height: clamp(112px, 15vh, 142px);
-  padding: 8px;
+  min-height: clamp(92px, 12vh, 112px);
+  padding: 6px;
   text-align: center;
 }
 
 .choice-button--flag .choice-index {
   position: absolute;
-  left: 14px;
-  top: 14px;
+  left: 10px;
+  top: 10px;
   z-index: 2;
-  width: 30px;
+  width: 28px;
   color: #1e2733;
   background: rgba(255, 250, 241, 0.98);
   border: 1px solid rgba(30, 39, 51, 0.14);
@@ -373,7 +373,7 @@
   z-index: 1;
   display: grid;
   place-items: center;
-  width: min(72%, 156px);
+  width: min(64%, 132px);
   min-width: 0;
   min-height: 0;
   height: auto;

@@ -394,37 +394,37 @@
   .guess-panel.is-choice-mode.is-flag-choice-mode {
     bottom: max(8px, env(safe-area-inset-bottom));
     width: min(620px, calc(100vw - 16px));
-    gap: 8px;
-    padding: 8px;
+    gap: 6px;
+    padding: 7px;
   }
 
   .choice-panel.is-flag-choice {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
+    gap: 5px;
   }
 
   .choice-instruction {
-    min-height: 18px;
-    font-size: 0.7rem;
+    min-height: 14px;
+    font-size: 0.66rem;
   }
 
   .choice-button--flag {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
     gap: 0;
-    min-height: clamp(88px, 18vh, 126px);
-    padding: 5px;
+    min-height: clamp(74px, 14vh, 98px);
+    padding: 4px;
   }
 
   .choice-button--flag .choice-index {
-    left: 8px;
-    top: 8px;
-    width: 25px;
-    font-size: 0.62rem;
+    left: 6px;
+    top: 6px;
+    width: 24px;
+    font-size: 0.6rem;
   }
 
   .flag-frame {
-    width: min(92%, 140px);
+    width: min(84%, 118px);
     height: auto;
     padding: 5px;
   }
@@ -489,35 +489,35 @@
   .guess-panel.is-choice-mode.is-flag-choice-mode {
     bottom: max(6px, env(safe-area-inset-bottom));
     width: min(560px, calc(100vw - 16px));
-    gap: 5px;
-    padding: 6px;
+    gap: 4px;
+    padding: 5px;
   }
 
   .choice-panel.is-flag-choice {
-    gap: 5px;
+    gap: 4px;
   }
 
   .choice-instruction {
-    min-height: 15px;
-    font-size: 0.62rem;
+    min-height: 12px;
+    font-size: 0.58rem;
   }
 
   .choice-button--flag {
     grid-template-rows: minmax(0, 1fr);
     gap: 0;
-    min-height: 62px;
-    padding: 4px;
+    min-height: 50px;
+    padding: 3px;
   }
 
   .choice-button--flag .choice-index {
-    left: 6px;
-    top: 6px;
-    width: 22px;
-    font-size: 0.56rem;
+    left: 5px;
+    top: 5px;
+    width: 20px;
+    font-size: 0.52rem;
   }
 
   .flag-frame {
-    width: 54px;
+    width: 45px;
     height: auto;
     padding: 3px;
   }
