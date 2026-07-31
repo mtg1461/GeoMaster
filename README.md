@@ -10,6 +10,7 @@ GeoMaster is a lightweight browser-based geography game hub built around an inte
 ## Game Modes
 
 - **Multiple Choice**: Choose the correct country from polished answer cards.
+- **Flag Match**: Choose the flag that matches the highlighted country.
 - **Type Answer**: Type the name of the zoomed-in country before the hints reveal too much.
 - **Click on Map**: Find and click the requested country directly on the map.
 
@@ -39,9 +40,11 @@ GeoMaster is a lightweight browser-based geography game hub built around an inte
 
 ## Development
 
-The application has no runtime dependencies and can be served by any static file server. A current Node.js release is only needed for the repository checks:
+The application has no runtime dependencies and can be served by any static file server. Flag SVGs are vendored locally, while a pinned development dependency keeps the asset set reproducible. A current Node.js release is only needed for asset syncing and repository checks:
 
 ```sh
+npm install
+npm run flags:verify
 npm test
 npm run check
 ```

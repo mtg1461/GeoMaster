@@ -391,6 +391,66 @@
     font-size: 0.78rem;
   }
 
+  .guess-panel.is-choice-mode.is-flag-choice-mode {
+    bottom: max(8px, env(safe-area-inset-bottom));
+    width: min(620px, calc(100vw - 16px));
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .choice-panel.is-flag-choice {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .choice-instruction {
+    min-height: 18px;
+    font-size: 0.7rem;
+  }
+
+  .choice-button--flag {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(44px, 1fr) 2.35em minmax(0, auto);
+    gap: 3px;
+    min-height: clamp(88px, 18vh, 126px);
+    padding: 5px;
+  }
+
+  .choice-button--flag .choice-index {
+    left: 8px;
+    top: 8px;
+    width: 25px;
+    font-size: 0.62rem;
+  }
+
+  .flag-frame {
+    height: clamp(44px, 9vh, 76px);
+    padding: 5px 7px;
+  }
+
+  .flag-caption {
+    font-size: clamp(0.66rem, 2.8vw, 0.76rem);
+  }
+
+  .flag-status {
+    font-size: clamp(0.54rem, 2vw, 0.62rem);
+  }
+
+  .choice-panel.is-flag-fallback .choice-button--flag {
+    grid-template-columns: 24px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    min-height: 40px;
+    padding: 5px 8px;
+  }
+
+  .choice-panel.is-flag-fallback .choice-button--flag .choice-index {
+    width: 24px;
+  }
+
+  .choice-panel.is-flag-fallback .flag-caption {
+    font-size: 0.76rem;
+  }
+
   .round-countdown {
     top: 50px;
   }
@@ -424,13 +484,76 @@
   }
 }
 
+@media (max-height: 520px) and (orientation: landscape) {
+  .guess-panel.is-choice-mode.is-flag-choice-mode {
+    bottom: max(6px, env(safe-area-inset-bottom));
+    width: min(560px, calc(100vw - 16px));
+    gap: 5px;
+    padding: 6px;
+  }
+
+  .choice-panel.is-flag-choice {
+    gap: 5px;
+  }
+
+  .choice-instruction {
+    min-height: 15px;
+    font-size: 0.62rem;
+  }
+
+  .choice-button--flag {
+    grid-template-rows: 34px 1.2em minmax(0, auto);
+    gap: 2px;
+    min-height: 62px;
+    padding: 4px;
+  }
+
+  .choice-button--flag .choice-index {
+    left: 6px;
+    top: 6px;
+    width: 22px;
+    font-size: 0.56rem;
+  }
+
+  .flag-frame {
+    height: 34px;
+    padding: 3px 5px;
+  }
+
+  .flag-caption {
+    height: 1.2em;
+    font-size: 0.62rem;
+    -webkit-line-clamp: 1;
+  }
+
+  .flag-status {
+    font-size: 0.52rem;
+    white-space: nowrap;
+  }
+
+  .choice-panel.is-flag-fallback .choice-button--flag {
+    min-height: 34px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .game-hud.feedback-wrong,
   .feedback-burst,
   .confetti-piece,
   .wrong-ring,
   .round-countdown__number,
-  .round-countdown.is-timeout .round-countdown__ring {
+  .round-countdown.is-timeout .round-countdown__ring,
+  .choice-button--flag,
+  .choice-button--flag::before,
+  .flag-frame,
+  .flag-caption,
+  .flag-status {
     animation-duration: 1ms;
+    transition-duration: 1ms;
+  }
+
+  .choice-button--flag:hover:not(:disabled),
+  .choice-button--flag:active:not(:disabled) {
+    transform: none;
   }
 }

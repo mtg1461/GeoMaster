@@ -320,6 +320,207 @@
   line-height: 1.18;
 }
 
+/* Flag Match keeps the existing multiple-choice behavior while giving its
+   image options a dedicated, map-friendly presentation. */
+.guess-panel.is-choice-mode.is-flag-choice-mode {
+  width: min(620px, calc(100vw - 32px));
+  gap: 10px;
+  padding: 14px;
+}
+
+.choice-panel.is-flag-choice {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.choice-instruction {
+  grid-column: 1 / -1;
+  min-height: 24px;
+  margin: 0;
+  color: #fff7e8;
+  font-size: 0.84rem;
+  font-weight: 850;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.34);
+}
+
+.choice-button--flag {
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(66px, 1fr) 2.35em minmax(0, auto);
+  justify-items: stretch;
+  gap: 5px;
+  min-height: clamp(112px, 15vh, 142px);
+  padding: 8px;
+  text-align: center;
+}
+
+.choice-button--flag .choice-index {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  z-index: 2;
+  width: 30px;
+  color: #1e2733;
+  background: rgba(255, 250, 241, 0.98);
+  border: 1px solid rgba(30, 39, 51, 0.14);
+  border-radius: 7px;
+  box-shadow: 0 4px 14px rgba(20, 24, 32, 0.22);
+}
+
+.flag-frame {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-width: 0;
+  height: clamp(62px, 9vh, 92px);
+  padding: 7px 9px;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(239, 228, 209, 0.24)),
+    #f7f2e8;
+  border: 1px solid rgba(30, 39, 51, 0.22);
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transition: border-color 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.flag-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.flag-caption,
+.flag-status {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 140ms ease;
+}
+
+.flag-caption {
+  display: -webkit-box;
+  height: 2.35em;
+  overflow: hidden;
+  color: #fff7e8;
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1.16;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.flag-status {
+  align-self: start;
+  color: rgba(255, 247, 232, 0.76);
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.choice-button--flag.is-label-visible .flag-caption,
+.choice-button--flag.is-label-visible .flag-status,
+.choice-panel.is-flag-fallback .flag-caption {
+  opacity: 1;
+  visibility: visible;
+}
+
+.choice-button--flag:hover:not(:disabled) .flag-frame {
+  border-color: rgba(232, 111, 81, 0.62);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7),
+    0 7px 18px rgba(0, 0, 0, 0.18);
+}
+
+.choice-button--flag:focus-visible {
+  outline: 3px solid #fff7e8;
+  outline-offset: 3px;
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 6px rgba(232, 111, 81, 0.64),
+    0 16px 34px rgba(0, 0, 0, 0.32);
+}
+
+.choice-button--flag.is-correct .flag-frame {
+  border-color: rgba(47, 157, 104, 0.96);
+  box-shadow:
+    inset 0 0 0 2px rgba(196, 255, 219, 0.72),
+    0 8px 20px rgba(47, 157, 104, 0.22);
+}
+
+.choice-button--flag.is-wrong .flag-frame {
+  border-color: rgba(200, 71, 62, 0.96);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 190, 190, 0.68),
+    0 8px 20px rgba(140, 18, 28, 0.2);
+}
+
+.choice-button--flag.is-answer:not(.is-correct) .flag-frame {
+  border-color: rgba(214, 151, 44, 0.98);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 214, 135, 0.74),
+    0 8px 20px rgba(214, 151, 44, 0.2);
+}
+
+.choice-button--flag.is-dimmed .flag-frame {
+  filter: saturate(0.72);
+}
+
+.choice-panel.is-flag-fallback .choice-button--flag {
+  grid-template-columns: 34px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  min-height: 58px;
+  padding: 9px 12px;
+  text-align: left;
+}
+
+.choice-panel.is-flag-fallback .flag-frame {
+  display: none;
+}
+
+.choice-panel.is-flag-fallback .choice-button--flag .choice-index {
+  position: static;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 34px;
+}
+
+.choice-panel.is-flag-fallback .flag-caption {
+  display: block;
+  grid-column: 2;
+  grid-row: 1;
+  height: auto;
+  font-size: 0.9rem;
+}
+
+.choice-panel.is-flag-fallback .flag-status {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.choice-status.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
 .guess-panel.flash-correct {
   animation: correct-panel-flash 700ms ease;
 }

@@ -2,7 +2,12 @@
   "name": "geo-master",
   "private": true,
   "scripts": {
-    "check": "node --check lib/*.js && node --check lib/views/*.js",
-    "test": "node --test"
+    "check": "node scripts/check-js.mjs",
+    "flags:sync": "node scripts/sync-flag-assets.mjs",
+    "flags:verify": "node scripts/verify-flag-assets.mjs",
+    "test": "npm run flags:verify && node --test"
+  },
+  "devDependencies": {
+    "country-flag-icons": "1.6.20"
   }
 }
