@@ -329,8 +329,8 @@
 }
 
 .choice-panel.is-flag-choice {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 7px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
 }
 
 .choice-instruction {
@@ -350,17 +350,17 @@
   grid-template-rows: minmax(0, 1fr);
   place-items: center;
   gap: 0;
-  min-height: clamp(92px, 12vh, 112px);
-  padding: 6px;
+  min-height: clamp(76px, 10vh, 92px);
+  padding: 5px;
   text-align: center;
 }
 
 .choice-button--flag .choice-index {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 7px;
+  top: 7px;
   z-index: 2;
-  width: 28px;
+  width: 25px;
   color: #1e2733;
   background: rgba(255, 250, 241, 0.98);
   border: 1px solid rgba(30, 39, 51, 0.14);
@@ -373,7 +373,7 @@
   z-index: 1;
   display: grid;
   place-items: center;
-  width: min(64%, 132px);
+  width: min(82%, 108px);
   min-width: 0;
   min-height: 0;
   height: auto;

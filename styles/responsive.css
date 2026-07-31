@@ -399,8 +399,8 @@
   }
 
   .choice-panel.is-flag-choice {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 5px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 4px;
   }
 
   .choice-instruction {
@@ -412,29 +412,29 @@
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
     gap: 0;
-    min-height: clamp(74px, 14vh, 98px);
-    padding: 4px;
+    min-height: clamp(66px, 10vh, 78px);
+    padding: 3px;
   }
 
   .choice-button--flag .choice-index {
-    left: 6px;
-    top: 6px;
-    width: 24px;
-    font-size: 0.6rem;
+    left: 4px;
+    top: 4px;
+    width: 21px;
+    font-size: 0.54rem;
   }
 
   .flag-frame {
-    width: min(84%, 118px);
+    width: min(82%, 72px);
     height: auto;
-    padding: 5px;
+    padding: 4px;
   }
 
   .flag-caption {
-    font-size: clamp(0.66rem, 2.8vw, 0.76rem);
+    font-size: clamp(0.58rem, 2.2vw, 0.7rem);
   }
 
   .flag-status {
-    font-size: clamp(0.54rem, 2vw, 0.62rem);
+    font-size: clamp(0.48rem, 1.7vw, 0.58rem);
   }
 
   .choice-panel.is-flag-fallback .choice-button--flag {
@@ -494,7 +494,8 @@
   }
 
   .choice-panel.is-flag-choice {
-    gap: 4px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 3px;
   }
 
   .choice-instruction {
@@ -505,19 +506,19 @@
   .choice-button--flag {
     grid-template-rows: minmax(0, 1fr);
     gap: 0;
-    min-height: 50px;
-    padding: 3px;
+    min-height: 56px;
+    padding: 2px;
   }
 
   .choice-button--flag .choice-index {
-    left: 5px;
-    top: 5px;
-    width: 20px;
-    font-size: 0.52rem;
+    left: 3px;
+    top: 3px;
+    width: 18px;
+    font-size: 0.48rem;
   }
 
   .flag-frame {
-    width: 45px;
+    width: 66px;
     height: auto;
     padding: 3px;
   }
