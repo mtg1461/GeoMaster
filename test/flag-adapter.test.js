@@ -52,6 +52,7 @@ test("renders canonical, non-revealing flag buttons", () => {
     const country = choices[index];
     const image = button.querySelector(".flag-image");
     const caption = button.querySelector(".flag-caption");
+    const answer = button.querySelector(".flag-answer");
 
     assert.equal(button.value, country);
     assert.ok(button.classList.contains("choice-button--flag"));
@@ -65,6 +66,8 @@ test("renders canonical, non-revealing flag buttons", () => {
     assert.equal(image.width, 300);
     assert.equal(image.height, 200);
     assert.equal(image.src, window.GeoMaster.countryFlags.getFlag(country).src);
+    assert.ok(answer);
+    assert.equal(answer.parentElement, image.parentElement);
   });
 
   elements.choiceButtons[2].click();

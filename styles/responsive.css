@@ -410,8 +410,8 @@
 
   .choice-button--flag {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: minmax(44px, 1fr) 2.35em minmax(0, auto);
-    gap: 3px;
+    grid-template-rows: minmax(0, 1fr);
+    gap: 0;
     min-height: clamp(88px, 18vh, 126px);
     padding: 5px;
   }
@@ -424,8 +424,9 @@
   }
 
   .flag-frame {
-    height: clamp(58px, 11vh, 84px);
-    padding: 5px 7px;
+    width: min(92%, 140px);
+    height: auto;
+    padding: 5px;
   }
 
   .flag-caption {
@@ -502,8 +503,8 @@
   }
 
   .choice-button--flag {
-    grid-template-rows: 34px 1.2em minmax(0, auto);
-    gap: 2px;
+    grid-template-rows: minmax(0, 1fr);
+    gap: 0;
     min-height: 62px;
     padding: 4px;
   }
@@ -516,8 +517,13 @@
   }
 
   .flag-frame {
-    height: 34px;
-    padding: 3px 5px;
+    width: 54px;
+    height: auto;
+    padding: 3px;
+  }
+
+  .flag-answer {
+    padding: 12px 4px 3px;
   }
 
   .flag-caption {
@@ -546,6 +552,7 @@
   .choice-button--flag,
   .choice-button--flag::before,
   .flag-frame,
+  .flag-answer,
   .flag-caption,
   .flag-status {
     animation-duration: 1ms;
